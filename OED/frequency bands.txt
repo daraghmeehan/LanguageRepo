@@ -1,0 +1,76 @@
+https://public.oed.com/how-to-use-the-oed/key-to-frequency/
+
+Key to frequency
+
+Calculating frequency
+
+The underlying frequency data is derived primarily from version 2 of the Google Books Ngrams data. This has been cross-checked against data from other corpora, and re-analysed in order to handle homographs and other ambiguities.
+
+The overall frequency score for nouns is calculated by summing frequencies for the singular and plural forms. The overall frequency score for verbs is calculated by summing frequencies for the infinitive form and all inflected forms. If a word has any significant spelling variations (especially differences between US and British spelling), the frequency values for these are also combined. Thus the overall frequency for the verb colour is calculated by summing frequencies for colour, colours, colouring, coloured, color, colors, coloring, and colored. Frequency scores will be recalculated periodically as the OED is revised.
+
+At present, we are only indicating the frequency that each word has in modern English (1970-). This is calculated by averaging the frequencies found for each decade from 1970 to the present day. If a word is more recent than 1970, we average the frequencies found for each decade from the word’s first recorded use.
+
+Frequency information is not given for obsolete words.
+Bands and distribution
+
+Each non-obsolete word is assigned to a frequency band based on its overall frequency score. Bands run from 8 (very high-frequency words) to 1 (very low-frequency). The scale is logarithmic: words in Band 8 are around ten times more frequent than words in Band 7, which in turn are around ten times more frequent than words in Band 6.
+
+The following table shows the frequency range for each band, and the percentage of non-obsolete OED entries assigned to each band:
+Band 	Frequency per million words 	% of entries in OED
+8 	> 1,000 	0.02%
+7 	100 – 999 	0.18%
+6 	10 – 99 	1%
+5 	1 – 9.9 	4%
+4 	0.1 – 0.99 	11%
+3 	0.01 – 0.099 	20%
+2 	< 0.0099 	45%
+1 	– 	18%
+
+Characteristics of each band
+Band 8
+
+Band 8 contains words which occur more than 1000 times per million words in typical modern English usage. This includes the most common English words, such as determiners (the, a, an, this, that), pronouns (I, you, he, she, him, he, that, which, what, who), principal prepositions (e.g. of, to, in, on, from, with) and conjunctions (e.g. and, but, that, if). It also includes the verbs be and have, other auxiliary and modal verbs (e.g. may, can, will, would), the other most common semantic main verbs (e.g. do, make, take, use), and basic quantifying adjectives (e.g. all, some, more, one). The only noun in this band is time.
+
+About 0.02% of all non-obsolete OED entries are in Band 8.
+
+Band 7
+
+Band 7 contains words which occur between 100 and 1000 times per million words in typical modern English usage. This includes the main semantic words which form the substance of ordinary, everyday speech and writing. Nouns include basic terms for people (e.g. man, woman, person, boy, girl), body parts (e.g. hand, eye, head, foot, blood), measurements of time (e.g. year, day, hour, month, week), general terms for common aspects of the immediate world (e.g. animal, tree, field, food, water, house, building, room), and basic vocabulary for referring to the world in abstract terms (e.g. thing, object, situation, place, point, part, quality) . Adjectives are general adjectives of number (e.g. two, three, four, second, third), of size or duration (e.g. large, high, low, small, long, old, young), and of value and judgement (e.g. good, best, true, right).
+
+About 0.18% of all non-obsolete OED entries are in Band 7.
+
+Band 6
+
+Band 6 contains words which occur between 10 and 100 times per million words in typical modern English usage, including a wide range of descriptive vocabulary. It contains many nouns referring to specific objects, entities, processes, and ideas, running from dog, horse, ship, machine, mile, assessment, army, career, stress to gas, explosion, desert, parish, envelope, and headache. There is a wide range of adjectives describing the qualities of particular situations, states of affairs, etc., or people’s actions in particular contexts, as professional, traditional, happy, successful, sufficient, sophisticated, voluntary, reluctant, abundant, vain, and many more. The basic colour adjectives (red, blue, green, yellow, orange, brown, grey, purple, pink) are all in band 6 (although black and white are in band 7). The band contains a large number of adjectives and nouns relating to nationality or geographical origin (e.g. Scottish, Irish, Australian, Canadian, Asian, French, Italian, German), as well as similar words denoting major religious denominations (e.g. Christian, Christianity, Jewish, Muslim, Islam, Protestant), and words relating to important political or economic systems and ideologies (e.g. democracy, democratic, communist, socialist, capitalism).
+
+About 1% of all non-obsolete OED entries are in Band 6.
+
+Band 5
+
+Band 5 contains words which occur between 1 and 10 times per million words in typical modern English usage. These tend to be restricted to literate vocabulary associated with educated discourse, although such words may still be familiar within the context of that discourse. The shift away from the everyday language found in bands 8-6 is apparent in nouns (e.g. surveillance, assimilation, tumult, penchant, paraphrase, admixture), adjectives (e.g. conditional, cumulative, arithmetic, radioactive, symptomatic, authorized, Neolithic, discontinuous, preconceived, metrical), verbs (e.g. appropriate, comprehend, presuppose, perpetuate, encircle, jeopardize, subsist, gravitate, proscribe), and adverbs (e.g. markedly, empirically, functionally, disproportionately, ad hoc, exponentially, preferentially). This band also contains the most common adjectives derived from the names of philosophers and scientists (e.g. Aristotelian, Platonic, Cartesian, Newtonian, Darwinian, Marxist, Freudian). Most words which would be seen as distinctively educated, while not being abstruse, technical, or jargon, are found in this band.
+
+About 4% of all non-obsolete OED entries are in Band 5.
+
+Band 4
+
+Band 4 contains words which occur between 0.1 and 1.0 times per million words in typical modern English usage. Such words are marked by much greater specificity and a wider range of register, regionality, and subject domain than those found in bands 8-5. However, most words remain recognizable to English-speakers, and are likely be used unproblematically in fiction or journalism. Examples include overhang, life support, rewrite, nutshell, candlestick, rodeo, embouchure, insectivore (nouns), astrological, egregious, insolent, Jungian, combative, bipartisan, cocksure, methylated (adjectives), intern, sequester, galvanize, cull, plop, honk, skyrocket, subpoena, pee, decelerate, befuddle, umpire (verbs), productively, methodically, lazily, pleasurably, surreptitiously, unproblematically, electrostatically, al dente, satirically (adverbs).
+
+About 11% of all non-obsolete OED entries are in Band 4.
+
+Band 3
+
+Band 3 contains words which occur between 0.01 and 0.1 times per million words in typical modern English usage. These words are not commonly found in general text types like novels and newspapers, but at the same time they are not overly opaque or obscure. Nouns include ebullition and merengue, and examples of adjectives are amortizable, prelapsarian, contumacious, agglutinative, quantized, argentiferous. In addition, adjectives include a marked number of very colloquial words, e.g. cutesy, dirt-cheap, teensy, badass, crackers. Verbs and adverbs diverge to opposite ends of the spectrum of use encompassed by this band. Verbs tend to be either colloquial or technical, e.g. emote, mosey, josh, recapitalize.
+
+About 20% of all non-obsolete OED entries are in Band 3.
+
+Band 2
+
+Band 2 contains words which occur fewer than 0.01 times per million words in typical modern English usage. These are almost exclusively terms which are not part of normal discourse and would be unknown to most people. Many are technical terms from specialized discourses. Examples taken from the most frequently attested part of the band include decanate, ennead, and scintillometer (nouns), geogenic, abactinal (adjectives), absterge and satinize (verbs). In the lower frequencies of the band, words are uniformly strange or exotic, e.g. smother-kiln, haver-cake, and sprunt (nouns), hidlings, unwhigged, supersubtilized, and gummose (adjectives), pantle, cloit, and stoothe (verbs), lawnly, acoast, and acicularly (adverbs), whethersoever (conjunction).
+
+About 45% of all non-obsolete OED entries are in Band 2.
+
+Band 1
+
+Band 1 contains extremely rare words unlikely ever to appear in modern text. These may be obscure technical terms or terms restricted to occasional historical use, e.g. abaptiston, abaxile, grithbreach, gurhofite, zarnich, zeagonite.
+
+About 18% of all non-obsolete OED entries are in Band 1.

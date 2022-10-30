@@ -1,0 +1,5 @@
+for turning all aac audio tracks of a video into separate aacs
+ffmpeg -i "My Neighbor Totoro.mp4" -map 0:a:0 -c copy totoro(eng).aac -map 0:a:1 -c copy totoro(spa).aac -map 0:a:2 -c copy totoro(fre).aac -map 0:a:3 -c copy totoro(ger).aac -map 0:a:4 -c copy totoro(jpn).aac
+
+for doing above for all mp4s in a folder
+for %i in (*.mp4) do ffmpeg -i "%i" -map 0:a:0 -c copy "%~ni(jap).aac" -map 0:a:1 -c copy "%~ni(eng).aac"
