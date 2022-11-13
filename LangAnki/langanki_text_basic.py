@@ -1,9 +1,8 @@
-from numpy import c_
-from deepl_assistant import DeepLAssistant
-from pdf_handler import pdf_text
+from Assistants.deepl_assistant import DeepLAssistant
 
 import re
 import spacy
+import pyperclip
 
 nlp = spacy.load("es_core_news_md")
 
@@ -42,45 +41,66 @@ def choose_line(sents):
         return choose_line(sents)
 
 
-# c_o_s_text = pdf_text("./J. K. Rowling - Harry Potter y la camara secreta.pdf")
-with open(
-    "./J. K. Rowling - Harry Potter y la camara secreta.txt", "r", encoding="utf-8"
-) as f:
-    c_o_s_text = f.readlines()
+try:
 
-c_o_s_text = " \n ".join(c_o_s_text)
+    # c_o_s_text = pdf_text("./J. K. Rowling - Harry Potter y la camara secreta.pdf")
+    with open(
+        "./HP/J. K. Rowling - Harry Potter y la camara secreta.txt", "r", encoding="utf-8"
+    ) as f:
+        c_o_s_text = f.readlines()
 
-c_o_s_text = re.sub(
-    "\n", " ", c_o_s_text
-)  # preventing newlines being grouped with words
-c_o_s_text = re.sub(
-    " +", " ", c_o_s_text
-)  # removing multiple spaces problem with pdf plumber
-## might want to remove/edit behaviour above line!!
+    c_o_s_text = " \n ".join(c_o_s_text)
 
-doc = nlp(c_o_s_text)
-sents = list(doc.sents)
+    c_o_s_text = re.sub(
+        "\n", " ", c_o_s_text
+    )  # preventing newlines being grouped with words
+    c_o_s_text = re.sub(
+        " +", " ", c_o_s_text
+    )  # removing multiple spaces problem with pdf plumber
+    ## might want to remove/edit behaviour above line!!
 
-while True:
-    sentence_substring = input("\nSubstring:")
+    doc = nlp(c_o_s_text)
+    sents = list(doc.sents)
 
-    matching_sents = [sent.text for sent in sents if sentence_substring in sent.text]
+    while True:
+        sentence_substring = input("\nSubstring:")
 
-    if len(matching_sents) == 0:
-        print("No matching sentences. Please try again.")
-        continue
+        matching_sents = [
+            sent.text for sent in sents if sentence_substring in sent.text
+        ]
 
-    if len(matching_sents) > 10:
-        print(
-            "More than 10 matching sentences. Please be more specific to narrow down your search."
-        )
-        continue
+        if len(matching_sents) == 0:
+            print("No matching sentences. Please try again.")
+            continue
 
-    line_number_to_learn = choose_line(matching_sents)
+        if len(matching_sents) > 10:
+            print(
+                "More than 10 matching sentences. Please be more specific to narrow down your search."
+            )
+            continue
 
-    if line_number_to_learn == -1:
-        continue
+        line_number_to_learn = choose_line(matching_sents)
 
-    line_to_learn = matching_sents[line_number_to_learn - 1]
+        if line_number_to_learn == -1:
+            continue
 
-    assistant.translate_text(line_to_learn)
+        line_to_learn = matching_sents[line_number_to_learn - 1]
+
+        # copy sentence to clipboard
+        pyperclip.copy(line_to_learn)
+        print("Line copied to clipboard.")
+
+        # enter the line into the input box
+        assistant.translate_text(line_to_learn)
+
+        input("Line entered. Enter any key to copy main translation.")
+        translation = assistant.copy_main_translation()
+
+        # copy translation to clipboard
+        pyperclip.copy(translation)
+        print("Translation copied to clipboard.")
+
+
+except:
+
+    assistant.stop_driver()
