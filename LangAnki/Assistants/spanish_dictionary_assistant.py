@@ -6,9 +6,9 @@ import selenium.webdriver.support.expected_conditions as EC
 
 from Assistants.assistant import Assistant
 
-# from assistant import Assistant
+# from assistant import Assistant # for testing
 
-# make finding search box and typing it, clicking button, opening multiple tabs and doing same procedures in them, closing popups -> all inheritable from superclass
+###!! make finding search box and typing it, clicking button, opening multiple tabs and doing same procedures in them, closing popups -> all inheritable from superclass
 
 
 class SpanishDictionaryAssistant(Assistant):
@@ -165,7 +165,7 @@ class SpanishDictionaryAssistant(Assistant):
 
         # first delete text already in the box
         search_text_box.clear()
-        sleep(0.3)
+        sleep(0.2)
 
         # enter query into search box
         search_text_box.send_keys(query)
@@ -183,7 +183,7 @@ class SpanishDictionaryAssistant(Assistant):
 
         # first delete text already in the box
         search_text_box.clear()
-        sleep(0.3)
+        sleep(0.2)
 
         # enter query into search box
         search_text_box.send_keys(query)

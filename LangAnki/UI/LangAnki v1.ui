@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>697</width>
-    <height>669</height>
+    <width>701</width>
+    <height>665</height>
    </rect>
   </property>
   <property name="font">
@@ -41,6 +41,9 @@
       <height>51</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
     </property>
@@ -70,6 +73,9 @@
       <height>341</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
@@ -85,6 +91,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -97,6 +106,9 @@
        <width>301</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
      </property>
      <property name="lineWidth">
       <number>1</number>
@@ -113,6 +125,9 @@
        <width>301</width>
        <height>134</height>
       </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
      </property>
      <layout class="QGridLayout" name="alternative_translations_layout">
       <property name="sizeConstraint">
@@ -139,6 +154,9 @@
             <pointsize>6</pointsize>
            </font>
           </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -155,6 +173,9 @@ p, li { white-space: pre-wrap; }
             <width>20</width>
             <height>16777215</height>
            </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
           </property>
           <property name="text">
            <string>-&gt;</string>
@@ -178,6 +199,9 @@ p, li { white-space: pre-wrap; }
             <pointsize>6</pointsize>
            </font>
           </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -194,6 +218,9 @@ p, li { white-space: pre-wrap; }
             <width>20</width>
             <height>16777215</height>
            </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
           </property>
           <property name="text">
            <string>-&gt;</string>
@@ -217,6 +244,9 @@ p, li { white-space: pre-wrap; }
             <pointsize>6</pointsize>
            </font>
           </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -233,6 +263,9 @@ p, li { white-space: pre-wrap; }
             <width>20</width>
             <height>16777215</height>
            </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
           </property>
           <property name="text">
            <string>-&gt;</string>
@@ -256,6 +289,9 @@ p, li { white-space: pre-wrap; }
             <pointsize>6</pointsize>
            </font>
           </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -273,6 +309,9 @@ p, li { white-space: pre-wrap; }
             <height>16777215</height>
            </size>
           </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
           <property name="text">
            <string>-&gt;</string>
           </property>
@@ -288,12 +327,21 @@ p, li { white-space: pre-wrap; }
        <x>10</x>
        <y>10</y>
        <width>301</width>
-       <height>91</height>
+       <height>105</height>
       </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
      </property>
      <layout class="QHBoxLayout" name="target_language_layout">
       <item>
        <widget class="QTextEdit" name="target_language_textedit">
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="tabChangesFocus">
+         <bool>true</bool>
+        </property>
         <property name="html">
          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -304,23 +352,43 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="translate_button">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>4</number>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>60</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Translate</string>
-        </property>
-       </widget>
+        <item>
+         <widget class="QPushButton" name="translate_button">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
+          <property name="text">
+           <string>Translate</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="refresh_translation_button">
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
+          <property name="text">
+           <string>Refresh</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -333,12 +401,21 @@ p, li { white-space: pre-wrap; }
        <height>81</height>
       </rect>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <layout class="QHBoxLayout" name="main_translation_layout">
       <property name="sizeConstraint">
        <enum>QLayout::SetMaximumSize</enum>
       </property>
       <item>
        <widget class="QTextEdit" name="main_translation_textedit">
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="tabChangesFocus">
+         <bool>true</bool>
+        </property>
         <property name="html">
          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -362,6 +439,9 @@ p, li { white-space: pre-wrap; }
           <height>16777215</height>
          </size>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="text">
          <string>-&gt;</string>
         </property>
@@ -379,6 +459,9 @@ p, li { white-space: pre-wrap; }
       <height>20</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
@@ -392,21 +475,34 @@ p, li { white-space: pre-wrap; }
       <height>51</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
     <layout class="QVBoxLayout" name="dictionary_lookup_layout">
      <item>
       <layout class="QHBoxLayout" name="dictionary_lookup_search_layout">
        <item>
         <widget class="QLabel" name="dictionary_lookup_label">
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
          <property name="text">
           <string>Dictionary Lookup:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="dictionary_lookup_lineedit"/>
+        <widget class="QLineEdit" name="dictionary_lookup_lineedit">
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="dictionary_search_button">
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
          <property name="text">
           <string>Search</string>
          </property>
@@ -420,6 +516,9 @@ p, li { white-space: pre-wrap; }
         <widget class="QCheckBox" name="collins_checkbox">
          <property name="tabletTracking">
           <bool>false</bool>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>
@@ -437,6 +536,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QCheckBox" name="spanishdict_checkbox">
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
          <property name="text">
           <string>SpanishDict</string>
          </property>
@@ -449,6 +551,9 @@ p, li { white-space: pre-wrap; }
         <widget class="QCheckBox" name="rae_checkbox">
          <property name="enabled">
           <bool>false</bool>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="text">
           <string>RAE</string>
@@ -471,6 +576,9 @@ p, li { white-space: pre-wrap; }
       <height>38</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
     <layout class="QHBoxLayout" name="sentences_forward_and_back">
      <property name="sizeConstraint">
       <enum>QLayout::SetFixedSize</enum>
@@ -481,6 +589,15 @@ p, li { white-space: pre-wrap; }
         <widget class="QSlider" name="horizontalSlider">
          <property name="enabled">
           <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>11</height>
+          </size>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="layoutDirection">
           <enum>Qt::RightToLeft</enum>
@@ -506,6 +623,9 @@ p, li { white-space: pre-wrap; }
              <height>16777215</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
+           </property>
            <property name="text">
             <string>+</string>
            </property>
@@ -515,6 +635,9 @@ p, li { white-space: pre-wrap; }
           <widget class="QLabel" name="sentences_back_label">
            <property name="enabled">
             <bool>true</bool>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
            </property>
            <property name="layoutDirection">
             <enum>Qt::LeftToRight</enum>
@@ -541,6 +664,9 @@ p, li { white-space: pre-wrap; }
              <height>16777215</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
+           </property>
            <property name="text">
             <string>-</string>
            </property>
@@ -556,6 +682,15 @@ p, li { white-space: pre-wrap; }
         <widget class="QSlider" name="horizontalSlider_2">
          <property name="enabled">
           <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>11</height>
+          </size>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="maximum">
           <number>5</number>
@@ -578,6 +713,9 @@ p, li { white-space: pre-wrap; }
              <height>16777215</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
+           </property>
            <property name="text">
             <string>-</string>
            </property>
@@ -587,6 +725,9 @@ p, li { white-space: pre-wrap; }
           <widget class="QLabel" name="sentences_forward_label">
            <property name="enabled">
             <bool>true</bool>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
            </property>
            <property name="text">
             <string>0 sentences forward</string>
@@ -606,6 +747,9 @@ p, li { white-space: pre-wrap; }
              <width>20</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
            </property>
            <property name="text">
             <string>+</string>
@@ -659,6 +803,9 @@ p, li { white-space: pre-wrap; }
      </item>
      <item>
       <widget class="QPushButton" name="search_substring_button">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
        <property name="text">
         <string>Search</string>
        </property>
@@ -697,6 +844,9 @@ p, li { white-space: pre-wrap; }
      </item>
      <item>
       <widget class="QPushButton" name="confirm_line_number_button">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
        <property name="text">
         <string>Confirm</string>
        </property>
@@ -713,6 +863,9 @@ p, li { white-space: pre-wrap; }
       <height>191</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
     <layout class="QGridLayout" name="extra_flashcard_editing_layout">
      <property name="sizeConstraint">
       <enum>QLayout::SetDefaultConstraint</enum>
@@ -725,10 +878,17 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="example_sentences_lineedit"/>
+      <widget class="QLineEdit" name="example_sentences_lineedit">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
+      </widget>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="other_forms_field_label">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
        <property name="text">
         <string>Other Forms</string>
        </property>
@@ -736,6 +896,9 @@ p, li { white-space: pre-wrap; }
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="example_sentences_field_label">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
        <property name="text">
         <string>Example Sentence(s)</string>
        </property>
@@ -743,16 +906,26 @@ p, li { white-space: pre-wrap; }
      </item>
      <item row="4" column="0">
       <widget class="QLabel" name="pronunciation_field_label">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
        <property name="text">
         <string>Pronunciation</string>
        </property>
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QLineEdit" name="pronunciation_lineedit"/>
+      <widget class="QLineEdit" name="pronunciation_lineedit">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
+      </widget>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="extra_info_field_label">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
        <property name="text">
         <string>Extra Info</string>
        </property>
@@ -760,13 +933,20 @@ p, li { white-space: pre-wrap; }
      </item>
      <item row="2" column="1">
       <widget class="QLineEdit" name="other_forms_lineedit">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
        <property name="text">
         <string/>
        </property>
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLineEdit" name="extra_info_lineedit"/>
+      <widget class="QLineEdit" name="extra_info_lineedit">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
+      </widget>
      </item>
      <item row="0" column="1">
       <widget class="QLineEdit" name="answer_hint_lineedit"/>
@@ -782,6 +962,9 @@ p, li { white-space: pre-wrap; }
       <height>251</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
     <layout class="QVBoxLayout" name="main_flashcard_editing_layout">
      <item>
       <layout class="QHBoxLayout" name="note_type_and_deck_settings">
@@ -795,6 +978,9 @@ p, li { white-space: pre-wrap; }
              <height>16777215</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Note Type:</string>
            </property>
@@ -802,6 +988,9 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <widget class="QComboBox" name="note_type_comboBox">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>TL (Understanding)</string>
@@ -821,6 +1010,9 @@ p, li { white-space: pre-wrap; }
              <height>16777215</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Deck:</string>
            </property>
@@ -828,6 +1020,9 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <widget class="QComboBox" name="deck_comboBox">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="editable">
             <bool>false</bool>
            </property>
@@ -873,7 +1068,11 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="target_language_field_textedit"/>
+        <widget class="QTextEdit" name="target_language_field_textedit">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -893,7 +1092,11 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="source_language_field_textedit"/>
+        <widget class="QTextEdit" name="source_language_field_textedit">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -901,6 +1104,9 @@ p, li { white-space: pre-wrap; }
       <layout class="QHBoxLayout" name="flashcard_bottom_layout">
        <item>
         <widget class="QPushButton" name="add_flashcard_button">
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
          <property name="text">
           <string>Add</string>
          </property>
@@ -913,6 +1119,9 @@ p, li { white-space: pre-wrap; }
            <width>70</width>
            <height>16777215</height>
           </size>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>Edit Previous</string>
@@ -932,6 +1141,12 @@ p, li { white-space: pre-wrap; }
       <height>241</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="tabChangesFocus">
+     <bool>true</bool>
+    </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -946,7 +1161,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>697</width>
+     <width>701</width>
      <height>18</height>
     </rect>
    </property>
@@ -954,12 +1169,13 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="actionOpen"/>
+    <addaction name="action_open"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
      <string>&amp;Edit</string>
     </property>
+    <addaction name="action_bold"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -971,12 +1187,33 @@ p, li { white-space: pre-wrap; }
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionOpen">
+  <action name="action_open">
    <property name="text">
     <string>&amp;Open</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_bold">
+   <property name="text">
+    <string>&amp;Bold</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>substring_search_lineedit</tabstop>
+  <tabstop>line_number_lineedit</tabstop>
+  <tabstop>target_language_textedit</tabstop>
+  <tabstop>main_translation_textedit</tabstop>
+  <tabstop>target_language_field_textedit</tabstop>
+  <tabstop>source_language_field_textedit</tabstop>
+  <tabstop>answer_hint_lineedit</tabstop>
+  <tabstop>dictionary_lookup_lineedit</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

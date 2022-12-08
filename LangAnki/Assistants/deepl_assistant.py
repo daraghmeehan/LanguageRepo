@@ -5,9 +5,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 import selenium.webdriver.support.expected_conditions as EC
 
-# from Assistants.assistant import Assistant
+from Assistants.assistant import Assistant
 
-from assistant import Assistant
+# from assistant import Assistant  # for testing
 
 
 class DeepLAssistant(Assistant):
@@ -15,8 +15,22 @@ class DeepLAssistant(Assistant):
         self.setup_assistant()
 
         self.deepl_language_button_mappings = {
-            "es": "translator-lang-option-es",
+            "es": "translator-lang-option-es",  # Spanish
             "en_output": "translator-lang-option-en-GB",
+            "nl": "translator-lang-option-nl",  # Dutch
+            "ja": "translator-lang-option-ja",  # Japanese
+            # above currently using, below future
+            "zh": "translator-lang-option-zh",  # Chinese
+            "cs": "translator-lang-option-cs",  # Czech
+            "fr": "translator-lang-option-fr",  # French
+            "de": "translator-lang-option-de",  # German
+            "el": "translator-lang-option-el",  # Greek
+            "it": "translator-lang-option-it",  # Italian
+            "pt_input": "translator-lang-option-pt",  # Portuguese input
+            "pt_eu_output": "translator-lang-option-pt-PT",  # European Portuguese output
+            "pt_br_output": "translator-lang-option-pt-BR",  # Brazilian Portuguese output
+            "ru": "translator-lang-option-ru",  # Russian
+            "tr": "translator-lang-option-tr",  # Turkish
         }
 
     def setup_assistant(self):
@@ -104,102 +118,40 @@ class DeepLAssistant(Assistant):
         # then paste text in input text box
         text_box.send_keys(text)
 
-        # # wait for translation and copy it
-        # try:
-        #     wait = WebDriverWait(self.driver, timeout=14, poll_frequency=0.7)
-        #     # when like button appears, translations also usually do
-        #     like_button = wait.until(
-        #         EC.element_to_be_clickable(
-        #             (By.XPATH, "//button[@aria-label='Like translation']")
-        #         )
-        #     )
-        #     sleep(3)
-        #     print("Waited")
+    def copy_main_translation(self, text_to_translate: str):
 
-        # except:
-        #     print("Didn't find like button")
-        #     pass
+        is_successful_translation = self.wait_for_translation(text_to_translate)
 
-        # # finding top translation <div>
-        # main_translation = self.driver.find_element(
-        #     By.XPATH, "//div[@id='target-dummydiv']"
-        # )
+        if not is_successful_translation:
+            print("Didn't verify successful translation")
 
-        # # using .text gives blank, so use innerHTML
-        # main_translation = main_translation.get_attribute("innerHTML").strip()
+        sleep(2)
 
-        # return main_translation
-
-    def copy_main_translation(self):
-
-        wait = WebDriverWait(self.driver, 10)
-
-        # try:
-        #     wait.until(
-        #         EC.element_to_be_clickable(
-        #             (
-        #                 By.XPATH,
-        #                 "//button[@aria-label='Copy to clipboard']",
-        #             )
-        #         )
-        #     )
-        #     print("Copy button finished!")
-        # except:
-        #     print("Copy button not finished")
-        #     pass
-
-        # # when the translation is finished this title is added to the translated text's div
-        # try:
-        #     wait.until(
-        #         EC.element_to_be_clickable(
-        #             (
-        #                 By.XPATH,
-        #                 "//div[@title='Click a word to see alternative translations']",
-        #             )
-        #         )
-        #     )
-        #     print("Title finished!")
-        # except:
-        #     print("Title not finished")
-        #     pass
-
-        # wait until 2 !!
         try:
-            wait.until(
-                lambda driver: re.search(
-                    "\w\w",
-                    driver.find_element(
-                        By.XPATH, "//div[@id='target-dummydiv']"
-                    ).get_attribute("innerHTML"),
-                )
-            )
-            print("Text present")
-
-            stuff = self.driver.find_element(
+            # finding top translation <div>
+            main_translation = self.driver.find_element(
                 By.XPATH, "//div[@id='target-dummydiv']"
-            ).get_attribute("innerHTML")
-
-            print(f"Text is {stuff[:10]}")
-
-        except Exception as e:
-            print(e)
-            print("Text not present")
-            pass
-
-        sleep(2.5)
-
-        # finding top translation <div>
-        main_translation = self.driver.find_element(
-            By.XPATH, "//div[@id='target-dummydiv']"
-        )
-
-        # using .text gives blank, so use innerHTML
-        main_translation = main_translation.get_attribute("innerHTML").strip()
+            )
+            # using .text gives blank, so use innerHTML
+            main_translation = main_translation.get_attribute("innerHTML").strip()
+            main_translation = main_translation.replace("­", "")
+        except:
+            print("Couldn't find translated text")
+            return ""
 
         return main_translation
 
-    def copy_translation(self, translation_number):
-        """..."""
+    def copy_all_translations(self, text_to_translate: str):
+        ###!!! not working
+
+        # if actually translating something, wait till see appropriately long main translation
+        if text_to_translate != "":
+            is_successful_translation = self.wait_for_translation(text_to_translate)
+
+            if not is_successful_translation:
+                print("Didn't verify successful translation")
+
+            sleep(2)
 
         try:
             # note - includes top translation, not just alternatives
@@ -207,28 +159,45 @@ class DeepLAssistant(Assistant):
                 By.XPATH,
                 "//ul[@aria-labelledby='alternatives-heading']//button[@class='lmt__translations_as_text__text_btn']",
             )
-
             all_translations = [
                 translation.get_attribute("innerHTML").strip()
                 for translation in all_translations
             ]
+            all_translations = [
+                translation.replace("­", "") for translation in all_translations
+            ]
+            return all_translations
         except:
-            pass
+            return []
+
+    ##!! input_text better name than text_to_translate??
+    def wait_for_translation(self, input_text):
+
+        ##!! only a heuristic for e.g. Spanish
+        min_length_of_translation = int(len(input_text) / 2)
+        min_length_of_translation = max(0, min_length_of_translation - 2)  # nonzero
+
+        wait = WebDriverWait(self.driver, 10)
 
         try:
-            assert type(translation_number) is int
-            assert 1 <= translation_number <= len(all_translations)
-        except:
-            print(
-                "Please ensure you choose an int in the range 1 to (number of translations)."
+            # wait until non whitespace characters found in main translation text, and it's at least min_length_of_translation long
+            wait.until(
+                lambda driver: re.search(
+                    f"\w.{{{min_length_of_translation},}}\w",
+                    driver.find_element(
+                        By.XPATH, "//div[@id='target-dummydiv']"
+                    ).get_attribute("innerHTML"),
+                )
             )
-
-        selected_translation = all_translations[translation_number - 1]
-
-        return selected_translation
+            return True
+        except:
+            print("No text found in translated div.")
+            return False
 
 
 if __name__ == "__main__":
+
+    from assistant import Assistant  # for testing
 
     text = "Los demócratas estadounidenses acarician el control del Senado con la punta de los dedos. Se han apuntado Arizona, con lo que tienen ya 49 senadores, y han dado un importante salto en Nevada con el que Catherine Cortez Masto ha neutralizado de golpe prácticamente toda la ventaja que le llevaba el republicano Adam Laxalt. Si los demócratas consiguen Nevada, ni siquiera tendrán que esperar a la segunda vuelta de Georgia para retener el control de la Cámara alta. Tras la derrota de Arizona, Donald Trump ha pedido que se repitan las elecciones y los republicanos han empezado a esparcir sospechas de irregularidades sin base. Las buenas noticias para los demócratas no llegan solo en el Senado. Todo apunta a que la Cámara de Representantes, que las encuestas daban por abrumadoramente republicana, se encamina hacia una ligerísima mayoría conservadora. E incluso no es descartable que acabe cayendo del lado del partido del presidente estadounidense, Joe Biden. Las encuestas ya colocaban como favoritos a los demócratas en la carrera por el Senado en Arizona. Pero el margen estrecho de diferencia y el lento recuento han aumentado el suspense. En el Estado quedan cientos de miles de votos por contar y es posible que el escrutinio se extienda a lo largo de la próxima semana, pero la ventaja del demócrata Mark Kelly ya es insalvable, según Associated Press, que lleva 175 años computando los votos en las elecciones estadounidenses y proclamando de forma infalible y casi oficial a los ganadores. Kelly tiene un 52% de los votos, una ventaja de unos seis puntos sobre el republicano Blake Masters, otro de los polémicos candidatos aupados por Donald Trump que han decepcionado las expectativas en estas elecciones. Fiel al trumpismo, tras ver que los votos le daban la espalda, Masters se ha dedicado a sembrar dudas sobre la limpieza del proc"
 
@@ -238,4 +207,4 @@ if __name__ == "__main__":
     # d.swap_deepl_languages()
     # d.translate_text("Holi guapa")
     d.translate_text(text)
-    print(d.copy_main_translation())
+    print(d.copy_main_translation(text))
